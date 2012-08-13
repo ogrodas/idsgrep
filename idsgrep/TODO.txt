@@ -1,0 +1,25 @@
+Setup script som gjør at idsgrep kan installeres på et systemet
+
+Splitting i to prosjekter.
+    -IDSgrep for å søke i logger
+    -SIGmanager for håndtering av håndtering av signaturer
+    
+Logging:
+    -Vanligvis er logging slått helt av.
+    -Kan settes opp med ulike level fra commandline eller config fil.
+    -Kan settes opp til å logge til fil.
+    
+Configfil:
+    -Slik at alle configer ligger i denne
+    -Søk i /etc/idsgrep.conf eller __file__ path /idsgrep.conf
+
+Setup
+    -Slik at programmet kan installeres på ulike systemer
+
+Generell CSV støtte
+    Slik at "splunk modus" i realiteten er "CVS" modus
+    
+
+Det er noe "rusk" med siglister og at den ikke lager "EKTE" signaturer. Det er bare signaturlister som kan parse signaturer. Det er derfor viktig at den returnerer ekte signaturer.
+ 
+    
