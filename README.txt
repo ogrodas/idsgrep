@@ -2,11 +2,16 @@
 IDSGrep
 ===========
 
-A Grep that understands: IP-addresses, CIDRs, IP-ranges and DOmains
+Installation
+=========
+python setup.py install
 
-Uses GNU grep implemenation of the Commentz-Walter[] string search algorithm behind the scene. 
-This makes it possible for idsgrep to search with more than 1 000 000 signatures and still 
-search through multiple megabytes of logdata per second.
+
+Overview
+=========
+IDSGrep is a simple grep that understands: IP-addresses, CIDRs, IP-ranges and Domains. The purpose of IDSGrep is to make it easy to search large logfiles for matches in common balcklists/watchlists
+
+IDSGrep uses GNU grep implementation of the Commentz-Walter[1] string search algorithm behind the scene. This makes it possible for IDSGrep to search large log files with more than 1 000 000 signatures and still search through multiple megabytes of logdata per second.
 
 [1] http://en.wikipedia.org/wiki/Commentz-Walter_algorithm
 
@@ -18,7 +23,7 @@ Example 1
 ---------
 idsgrep evil.com logdata.gz
 
-This command wil print all lines containg the domain evil.com. Compared to normal GNU Grep, idsgrep will not match on the domain "notevil.com"
+This command wil print all lines containg the domain evil.com. Compared to normal GNU Grep, IDSGrep will not match on the domain "notevil.com"
 
 Example 2
 ---------
@@ -39,10 +44,7 @@ asset.txt
 
 idsgrep -b evil.txt -a asset.txt logdata.gz
 
-Will print all lines that match any of the signatures in evil.txt. For each line that matches it will then use the signatures in assets.txt and identify a victim. 
-In the console output the attacker will be colored red and the victim colored green.
-
-
+Will print all lines that match any of the signatures in evil.txt. For each line that matches it will then use the signatures in assets.txt and identify a victim. In the console output the attacker will be colored red and the victim colored green.
 
 
 Commandline options
