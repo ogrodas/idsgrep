@@ -28,7 +28,7 @@ This command wil print all lines containg the domain evil.com. Compared to norma
 Example 2
 ---------
 idsgrep 192.168.2.0/24 logdata.gz
-
+d
 Understands the CIDR and will match on all IP-adresses in the CIDR.
 
 Example 3
